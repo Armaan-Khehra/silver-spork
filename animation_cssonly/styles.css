@@ -1,0 +1,75 @@
+/* General page styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0e0e0e;
+    overflow: hidden;
+}
+
+/* Background Animation */
+.background-animation {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, #ff5e5e, #ffaeae, #000);
+    animation: backgroundMove 10s infinite alternate;
+    z-index: -1;
+}
+
+@keyframes backgroundMove {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Text Animation */
+.text-animation {
+    font-size: 3rem;
+    color: #fff;
+    animation: textFadeIn 5s infinite;
+}
+
+@keyframes textFadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Image Animation */
+.image-animation {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+    animation: imageRotate 10s infinite;
+}
+
+@keyframes imageRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Position content in center */
+.content {
+    text-align: center;
+}
